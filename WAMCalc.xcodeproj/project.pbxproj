@@ -14,6 +14,8 @@
 		FB8C921824975D0A001A7D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8C921724975D0A001A7D0F /* Assets.xcassets */; };
 		FB8C921B24975D0A001A7D0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8C921A24975D0A001A7D0F /* Preview Assets.xcassets */; };
 		FB8C921E24975D0A001A7D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8C921C24975D0A001A7D0F /* LaunchScreen.storyboard */; };
+		FB8C922824975DE5001A7D0F /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8C922724975DE5001A7D0F /* Subject.swift */; };
+		FB8C922A24976620001A7D0F /* AddSubjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8C922924976620001A7D0F /* AddSubjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FB8C921A24975D0A001A7D0F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB8C921D24975D0A001A7D0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB8C921F24975D0A001A7D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB8C922724975DE5001A7D0F /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		FB8C922924976620001A7D0F /* AddSubjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +62,10 @@
 		FB8C920D24975D08001A7D0F /* WAMCalc */ = {
 			isa = PBXGroup;
 			children = (
+				FB8C922624975DB0001A7D0F /* Models */,
+				FB8C922524975DA3001A7D0F /* Views */,
 				FB8C920E24975D09001A7D0F /* AppDelegate.swift */,
 				FB8C921024975D09001A7D0F /* SceneDelegate.swift */,
-				FB8C921524975D09001A7D0F /* ContentView.swift */,
 				FB8C921724975D0A001A7D0F /* Assets.xcassets */,
 				FB8C921C24975D0A001A7D0F /* LaunchScreen.storyboard */,
 				FB8C921F24975D0A001A7D0F /* Info.plist */,
@@ -76,6 +81,23 @@
 				FB8C921A24975D0A001A7D0F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB8C922524975DA3001A7D0F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB8C921524975D09001A7D0F /* ContentView.swift */,
+				FB8C922924976620001A7D0F /* AddSubjectView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB8C922624975DB0001A7D0F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB8C922724975DE5001A7D0F /* Subject.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +174,8 @@
 				FB8C920F24975D09001A7D0F /* AppDelegate.swift in Sources */,
 				FB8C921424975D09001A7D0F /* WAMCalc.xcdatamodeld in Sources */,
 				FB8C921624975D09001A7D0F /* ContentView.swift in Sources */,
+				FB8C922A24976620001A7D0F /* AddSubjectView.swift in Sources */,
+				FB8C922824975DE5001A7D0F /* Subject.swift in Sources */,
 				FB8C921124975D09001A7D0F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
