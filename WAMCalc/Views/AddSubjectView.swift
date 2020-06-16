@@ -15,6 +15,10 @@ struct AddSubjectView: View {
     // Binding that shows or hides this modal.
     @Binding var showModal: Bool
     
+    // Alert variables.
+    @State private var showAlert: Bool = false
+    @State private var alertMessage: String = "Please enter a subject name."
+    
     // Our state variables to hold the values of the text fields.
     @State private var subjectName: String = ""
     @State private var subjectCreditPoints: Int = 6
@@ -25,9 +29,17 @@ struct AddSubjectView: View {
             VStack {
                 // Cancel button. (Used to support landscape orientation.)
                 HStack {
-                    Spacer()
-                    Button(action: { self.showModal = false}) {
+                    Button(action: { self.showModal = false }) {
                         Text("Cancel")
+                    }
+                    
+                    Spacer()
+                    
+                    Button(action: { self.addSubject() }) {
+                        Text("Submit")
+                    }
+                    .alert(isPresented: self.$showAlert) {
+                        Alert(title: Text("Couldn't Submit"), message: Text(self.alertMessage), dismissButton: .default(Text("OK")))
                     }
                 }
                 .padding(.horizontal, 20)
@@ -58,12 +70,6 @@ struct AddSubjectView: View {
                         .pickerStyle(WheelPickerStyle())
                         .labelsHidden()
                     }
-                    
-                    // Submit button.
-                    Button(action: { self.addSubject() }) {
-                        Text("Submit")
-                    }
-                    .frame(minWidth: 0, maxWidth: .infinity)
                 }
             }
             .navigationBarTitle("Add Subject")
@@ -85,5 +91,11 @@ struct AddSubjectView: View {
             // Something bad happened. Print the error to the console.
             print(error)
         }
+    }
+}
+
+struct AddSubjectView_Previews: PreviewProvider {
+    static var previews: some View {
+        AddSubjectView(showModal: .constant(true))
     }
 }
