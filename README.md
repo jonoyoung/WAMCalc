@@ -10,4 +10,4 @@ To run this project, feel free to clone this repo and run it on a simulator or p
 This project is created with the MIT license. So feel free to do whatever you want with the app.
 
 ## Link
-I will add a link soon when I have the writeup on the development of the app.
+Here is the link to the writeup on my website: [Link](https://jyoung.co/posts/wamcalc/)
